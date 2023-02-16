@@ -1,0 +1,48 @@
+body{
+    background: url(back.jpg) ;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    display: absolute;
+    font-family: sans-serif;
+}
+.container{
+    position: flex;
+    margin-top: 20px;
+    width: auto;
+    height: auto;
+    background: #dedede;
+    border-radius: 10px;
+}
+h1{
+    color: #dedede;
+}
+h3{
+    color: #dedede;
+}
+table{
+    margin-left: 2px;
+    color: black;
+    font-size: 14px;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+thead{
+    background: gray;
+    
+}
+th{
+    padding: 20px 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+td{
+    padding: 15px;
+    border-bottom: solid 1px black;
+    border-top: solid 1px black;
+    border-left: solid 1px black;
+}
+
+tbody tr:hover{
+    background: lightgray;
+}

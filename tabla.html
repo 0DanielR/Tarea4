@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 2</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    
+    <div class="container" name="Admin">
+        <table>
+            <thead>
+                <tr>
+                    <th>Comando         </th>
+                    <th>Descripción </th>
+                    <th>Parametros y descripción</th>
+                    <th>Ejemplo   </th>
+                </tr>
+            </thead>
+            <tr>
+                <td>git-add[1]</td>
+                <td>Agrega el contenido del archivo al índice</td>    
+                <td></td>
+                <td>$ git add Documentation/\*.txt</td>
+            </tr>
+            <tr>
+                <td>git-am[1]</td>
+                <td>Agrega una serie de parches desde un buzón</td>    
+                <td> </td>
+                <td>$ git am -abort</td>
+            </tr>
+            <tr>
+                <td>git-archive[1]</td>
+                <td>Crea un archivo de archivos de un árbol con nombre</td>    
+                <td></td>
+                <td>$ git archive --format=tar --prefix=git-1.4.0/ v1.4.0 | gzip >git-1.4.0.tar.gz</td>
+            </tr>
+            <tr>
+                <td>get-bisect[1]</td>
+                <td>Use la búsqueda binaria para encontrar la confirmación que introdujo un error</td>    
+                <td>git bisect subcommand options</td>
+                <td>$ git bisect run make   </td>
+            </tr>
+            <tr>
+                <td>get-branch[1]</td>
+                <td>Listar, crear o eliminar ramas</td>    
+                <td></td>
+                <td>$ git switch my2.6.14  </td>
+            </tr>
+            <tr>
+                <td>git-bundle[1]</td>
+                <td>Mover objetos y referencias por archivos</td>    
+                <td></td>
+                <td>machineB$ git clone -b master /home/me/tmp/file.bundle R2  </td>
+            </tr>
+            <tr>
+                <td>git-checkout[1]</td>
+                <td>Cambiar ramas o restaurar archivos de árbol de trabajo</td>    
+                <td></td>
+                <td>$ git checkout master </td>
+            </tr>
+            <tr>
+                <td>git-cherry-pick[1]</td>
+                <td>Aplicar los cambios introducidos por algunas confirmaciones existentes </td>    
+                <td>git cherry-pick [--editar] [-n] [-m ] [-s] [-x] [--ff] git cherry-pick (--continue | --skip | --abort | --quit)</td>
+                <td> git cherry-pick master </td>
+            </tr>
+            <tr>
+                <td>git-citool[1]</td>
+                <td>Alternativa gráfica a git-commit </td>    
+                <td>git citool</td>
+                <td> git citool</td>
+            </tr>
+            <tr>
+                <td>git-clone[1]</td>
+                <td>Clona un repositorio en un nuevo directorio</td>    
+                <td></td>
+                <td> $ git clone -l -s -n . ../copy</td>
+            </tr>
+            <tr>
+                <td>git-commit[1]</td>
+                <td>Registrar cambios en el repositorio</td>    
+                <td></td>
+                <td>$ edit hello.c
+                    $ git rm goodbye.c
+                    $ git add hello.c
+                    $ git commit
+                    </td>
+            </tr>
+            <tr>
+                <td>git-describe[1]</td>
+                <td>Dar a un objeto un nombre legible por humanos basado en una referencia disponible</td>    
+                <td>git describe [--all] [--tags] [--contains] [--abbrev=<n>] [<commit-ish>…]
+                    git describe [--all] [--tags] [-- contiene] [--abbrev=<n>] --dirty[=<marca>]
+                   </td>
+                <td>$ git describe parent </td>
+            </tr>
+            <tr>
+                <td>git-diff[1]</td>
+                <td>muestra los cambios entre confirmaciones, confirmación y árbol de trabajo, etc. </td>    
+                <td></td>
+                <td> $ git diff --cached </td>
+            </tr>
+            <tr>
+                <td>git-fetch[1]</td>
+                <td>Descarga objetos y referencias de otro repositorio</td>    
+                <td></td>
+                <td>$ git fetch --prune <name></name></td>
+            </tr>
+            <tr>
+                <td>git-format-patch[1]</td>
+                <td>preparar parches para enviar por correo electrónico</td>    
+                <td></td>
+                <td>$ git format-patch --root origin</td>
+            </tr>
+            <tr>
+                <td>git-gc[1]</td>
+                <td>Limpia archivos innecesarios y optimiza el repositorio local</td>    
+                <td>git gc [--agresivo] [--auto] [--quiet] [--prune=<fecha> | --no-prune] [--force] [--keep-largest-pack</td>
+                <td>gc.reflogExpire</td>
+            </tr>
+            <tr>
+                <td>git-grep[1]</td>
+                <td>Imprimir líneas que coincidan con un patrón</td>    
+                <td></td>
+                <td>git grep 'time_t' -- '*.[ch]'</td>
+            </tr>
+            <tr>
+                <td>git-gui[1]</td>
+                <td> Una interfaz gráfica portátil para Git</td>    
+                <td>git gui [command] [arguments]</td>
+                <td>git gui blame Makefile</td>
+            </tr>
+            <tr>
+                <td>git-init[1]</td>
+                <td>crea un repositorio Git vacío o reinicializa uno existente</td>    
+                <td></td>
+                <td>$ cd /path/to/my/codebase
+                    $ git init      (1)
+                    $ git add .     (2)
+                    $ git commit    (3)
+                    </td>
+            </tr>
+            <tr>
+                <td>git-log[1]</td>
+                <td>Mostrar registros de confirmación</td>    
+                <td>git log [options] [revision-range] [[--] path…]</td>
+                <td>
+                    git log --no-merges
+                    </td>
+            </tr>
+            <tr>
+                <td>git-maintenance[1]</td>
+                <td>ejecuta tareas para optimizar los datos del repositorio de Git</td>    
+                <td>git maintenance run [options]
+                    git maintenance start [--scheduler=scheduler]
+                    git maintenance (stop|register|unregister) [options]
+                    </td>
+                <td>git maintenance start</td>
+            </tr>
+            <tr>
+                <td>git-merge[1]</td>
+                <td>une dos o más historias de desarrollo</td>    
+                <td></td>
+                <td>$ git merge fixes enhancements</td>
+            </tr>
+            <tr>
+                <td>git-mv[1]</td>
+                <td>mueve o cambia el nombre de un archivo, un directorio o un enlace simbólico</td>    
+                <td>git mv [options] source… destination</td>
+                <td>git mv [-v] [-f] [-n] [-k] source destination</td>
+            </tr>
+            <tr>
+                <td>git-notes[1]</td>
+                <td>Agregar o inspeccionar notas de objetos</td>    
+                <td></td>
+                <td>$ git notes add -m 'Tested-by: Johannes Sixt j6t@kdbg.org' 72a144e2</td>
+            </tr>
+            <tr>
+                <td>git-pull[1]</td>
+                <td>obtenga e integre con otro repositorio o una sucursal local</td>    
+                <td>git pull [options] [repository [refspec…]]</td>
+                <td>$ git pull origin</td>
+            </tr>
+            <tr>
+                <td>git-push[1]</td>
+                <td>actualiza las referencias remotas junto con los objetos asociados</td>    
+                <td></td>
+                <td>git push origin master</td>
+            </tr>
+            <tr>
+                <td>git-range-diff[1]</td>
+                <td>Compara dos rangos de confirmación (por ejemplo, dos versiones de una rama)</td>    
+                <td></td>
+                <td>$ git range-diff @{u} @{1} @</td>
+            </tr>
+            <tr>
+                <td>git-rebase[1]</td>
+                <td>Vuelva a aplicar confirmaciones encima de otra sugerencia base</td>    
+                <td></td>
+                <td>$ git rebase --onto subsystem subsystem@{1}</td>
+            </tr>
+            <tr>
+                <td>git-reset[1]</td>
+                <td>Restablecer HEAD actual al estado especificado</td>    
+                <td></td>
+                <td>$ edit                                     (1)
+                    $ git add frotz.c filfre.c
+                    $ mailx                                    (2)
+                    $ git reset                                (3)
+                    $ git pull git://info.example.com/ nitfol  (4)
+                    </td>
+            </tr>
+            <tr>
+                <td>git-restore[1]</td>
+                <td>Restaurar archivos de árbol de trabajo</td>    
+                <td></td>
+                <td>$ git switch master
+                    $ git restore --source master~2 Makefile  (1)
+                    $ rm -f hello.c
+                    $ git restore hello.c                     (2)
+                    </td>
+            </tr>
+            <tr>
+                <td>git-revert[1]</td>
+                <td>Revertir algunas confirmaciones existentes</td>    
+                <td>git revert [--[no-]edit] [-n] [-m parent-number] [-s] [-S[keyid]] commit…
+                    git revert (--continue | --skip | --abort | --quit)
+                    </td>
+                <td>git revert -n master~5..master~2</td>
+            </tr>
+            <tr>
+                <td>git-rm[1]</td>
+                <td>Elimina archivos del árbol de trabajo y del índice</td>    
+                <td>git rm [-f | --force] [-n] [-r] [--cached] [--ignore-unmatch]
+                    [--quiet] [--pathspec-from-file=file [--pathspec-file-nul]]
+                    [--] [pathspec…]
+              </td>
+                <td>git rm -f git-*.sh</td>
+            </tr>
+            <tr>
+                <td>git-shortlog[1]</td>
+                <td>resume la salida del registro de git</td>    
+                <td>git shortlog [options] [revision-range] [[--] path…]
+                    git log --pretty=short | git shortlog [options]
+                    </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>git-show[1]</td>
+                <td>Muestra varios tipos de objetos</td>    
+                <td>git show [options] [object…]</td>
+                <td>git show v1.0.0^{tree}</td>
+            </tr>
+            <tr>
+                <td>git-sparse-checkout[1]</td>
+                <td>reduce tu árbol de trabajo a un subconjunto de archivos rastreados</td>    
+                <td>git sparse-checkout (init | list | set | add | reapply | disable) [options]</td>
+                <td>git sparse-checkout set --no-cone '/*' '!unwanted'</td>
+            </tr>
+            <tr>
+                <td>git-stash[1]</td>
+                <td>guarda los cambios en un directorio de trabajo sucio</td>    
+                <td></td>
+                <td>$ git pull
+                    ...
+                   file foobar not up to date, cannot merge.
+                   $ git stash
+                   $ git pull
+                   $ git stash pop
+                   </td>
+            </tr>
+            <tr>
+                <td>git-status[1]</td>
+                <td>Muestra el estado del árbol de trabajo</td>    
+                <td>git status [options] [--] [pathspec…]</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>git-submodule[1]</td>
+                <td>Inicializar, actualizar o inspeccionar submódulos</td>    
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>git-switch[1]</td>
+                <td>Cambiar ramas</td>    
+                <td>git switch [options] [--no-guess] branch
+                    git switch [options] --detach [start-point]
+                    git switch [options] (-c|-C) new-branch [start-point]
+                    git switch [options] --orphan new-branch  
+                </td>
+                <td>$ git switch master</td>
+            </tr>
+            <tr>
+                <td>git-tag[1]</td>
+                <td>cree, enumere, elimine o verifique un objeto de etiqueta firmado con GPG</td>    
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>git-worktree[1]</td>
+                <td>Administra múltiples árboles de trabajo</td>    
+                <td></td>
+                <td>$ git worktree list</td>
+            </tr>
+            <tr>
+                <td>gitk[1]</td>
+                <td>El navegador del repositorio de Git</td>    
+                <td>gitk [options] [revision range] [--] [path…]</td>
+                <td>gitk --max-count=100 --all -- Makefile</td>
+            </tr>
+            <tr>
+                <td>scalar[1]</td>
+                <td> una herramienta para administrar grandes repositorios de Git</td>    
+                <td></td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td><strong>Ancillary Commands</strong></td>
+                
+            </tr>
+            <tr>
+                <td>git-config[1]</td>
+                <td>obtenga y configure el repositorio o las opciones globales</td>    
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>git-fast-export[1]</td>
+                <td>Exportador de datos Git</td>    
+                <td>git fast-export [options] | git fast-import</td>
+                <td>$ git fast-export --all | (cd /empty/repository && git fast-import)</td>
+            </tr>
+            <tr>
+                <td>git-fast-import[1]</td>
+                <td>Backend para importadores rápidos de datos Git</td>    
+                <td>frontend | git fast-import [options]</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>git-filter-branch[1]</td>
+                <td>Reescribir ramas</td>    
+                <td></td>
+                <td>git filter-branch --tree-filter 'rm filename' HEAD</td>
+            </tr>
+            <tr>
+                <td>git-mergetool[1]</td>
+                <td>Ejecute herramientas de resolución de conflictos de fusión para resolver conflictos de fusión</td>    
+                <td>git mergetool [--tool=tool] [-y | --[no-]prompt] [file…]</td>
+                <td>mergetool.hideResolved</td>
+            </tr>
+            <tr>
+                <td>git-pack-refs[1]</td>
+                <td>Paquete de encabezados y etiquetas para un acceso eficiente al repositorio</td>    
+                <td>git pack-refs [--all] [--no-prune]</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>git-prune[1]</td>
+                <td>Elimina todos los objetos inalcanzables de la base de datos de objetos</td>    
+                <td>git prune [-n] [-v] [--progress] [--expire time] [--] [head…]</td>
+                <td>$ git prune $(cd ../another && git rev-parse --all)</td>
+            </tr>
+            <tr>
+                <td>git-reflog[1]</td>
+                <td>Administrar información de reflog</td>    
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>git-remote[1]</td>
+                <td>Administrar un conjunto de repositorios rastreados</td>    
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>git-repack[1]</td>
+                <td>Empaquetar objetos desempaquetados en un repositorio</td>    
+                <td>git repack [-a] [-A] [-d] [-f] [-F] [-l] [-n] [-q] [-b] [-m] [--window=n] [--depth=n] [--threads=n] [--keep-pack=pack-name] [--write-midx]</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>git-replace[1]</td>
+                <td>Crear, enumerar, eliminar referencias para reemplazar objetos</td>    
+                <td>git replace [-f] object replacement
+                    git replace [-f] --edit object
+                    git replace [-f] --graft commit [parent…]
+                    git replace [-f] --convert-graft-file
+                    git replace -d object…
+                    git replace [--format=format] [-l [pattern]]
+                    </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>git-annotate[1]</td>
+                <td>Anota líneas de archivo con información de confirmación</td>    
+                <td>git annotate [options] [rev-opts] [rev] [--] file</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>git-blame[1]</td>
+                <td>muestra qué revisión y autor modificaron por última vez cada línea de un archivo</td>    
+                <td></td>
+                <td>git blame -C -C -f $commit^! -- foo</td>
+            </tr>
+            <tr>
+                <td>git-bugreport[1]</td>
+                <td> recopila información para que el usuario presente un informe de error</td>    
+                <td>git bugreport [(-o | --output-directory) path] [(-s | --suffix) format]
+                    [--diagnose[=mode]]
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>git-count-objects[1]</td>
+                <td>Cuenta el número de objetos desempaquetados y su consumo de disco</td>    
+                <td>git count-objects [-v] [-H | --human-readable]</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>git-diagnose[1]</td>
+                <td>genera un archivo zip de información de diagnóstico</td>    
+                <td>git diagnose [(-o | --output-directory) path] [(-s | --suffix) format]
+                    [--mode=mode]
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>git-difftool[1]</td>
+                <td>Mostrar cambios usando herramientas diff comunes</td>    
+                <td>git difftool [options] [commit [commit]] [--] [path…]</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>git-help[1]</td>
+                <td>Mostrar información de ayuda sobre Git</td>    
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>git-instaweb[1]</td>
+                <td>Explore instantáneamente su repositorio de trabajo en gitweb</td>    
+                <td>git instaweb [--local] [--httpd=httpd] [--port=port]
+                    [--browser=browser]
+                    git instaweb [--start] [--stop]
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>git-merge-tree[1]</td>
+                <td>realiza la combinación sin tocar el índice o el árbol de trabajo</td>    
+                <td>git merge-tree [--write-tree] [options] branch1 branch2
+                    git merge-tree [--trivial-merge] base-tree branch1 branch2 (deprecated)
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>git-rerere[1]</td>
+                <td>Reutilizar la resolución grabada de fusiones en conflicto</td>    
+                <td>git rerere [clear | forget pathspec… | diff | status | remaining | gc]</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>git-show-branch[1]</td>
+                <td>Mostrar ramas y sus confirmaciones</td>    
+                <td></td>
+                <td>$ git show-branch --reflog="10,1 hour ago" --list master</td>
+            </tr>
+            <tr>
+                <td>git-verify-commit[1]</td>
+                <td>Verifica la firma GPG de las confirmaciones</td>    
+                <td>git verify-commit [-v | --verbose] [--raw] commit…</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>git-verify-tag[1]</td>
+                <td>Comprobar la firma GPG de las etiquetas</td>    
+                <td>git verify-tag [-v | --verbose] [--format=format] [--raw] <tag>…</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>git-version[1]</td>
+                <td>Mostrar información de la versión de Git</td>    
+                <td>git version [--build-options]</td>
+                <td>git --version</td>
+            </tr>
+            <tr>
+                <td>git-whatchanged[1]</td>
+                <td>muestra los registros con la diferencia que presenta cada confirmación</td>    
+                <td>git whatchanged option…</td>
+                <td>git whatchanged -p v2.6.12.. include/scsi drivers/scsi</td>
+            </tr>
+            <tr>
+                <td>gitweb[1]</td>
+                <td>Interfaz web de Git (interfaz web para repositorios de Git)</td>    
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+        
+    </div>  
+</body>
+</html>
